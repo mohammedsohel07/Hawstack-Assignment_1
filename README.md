@@ -3,19 +3,29 @@
 ## Run
 mvn spring-boot:run
 
-H2 console: http://localhost:8080/h2-console
-JDBC URL: jdbc:h2:mem:assignmentdb
+H2 Console: http://localhost:8080/h2-console  
+JDBC URL: jdbc:h2:mem:assignmentdb  
 User: sa (no password)
 
-## Example flow (after starting):
+## Seeded Data (from data.sql)
+Users:  
+- Alice (id = 1)  
+- Bob (id = 2)
 
-# Seeded users/courses/lessons available from data.sql: Alice(id=1), Bob(id=2), Course Java 101(id=10), lessons 100/101
+Course:  
+- Java 101 (id = 10)
 
-Enroll:
+Lessons:  
+- Lesson 100  
+- Lesson 101
+
+## Example Flow (after starting the application)
+
+### Enroll a user into a course
 curl -X POST -H "Content-Type: application/json" -d '{"userId":1}' http://localhost:8080/courses/10/enroll
 
-Complete lesson:
+### Complete a lesson
 curl -X POST -H "Content-Type: application/json" -d '{"userId":1}' http://localhost:8080/courses/10/lessons/100/complete
 
-Get progress:
+### Get user progress
 curl http://localhost:8080/users/1/courses/10/progress
