@@ -1,0 +1,15 @@
+com\example\assignment\repository\LessonRepository.class
+com\example\assignment\model\User.class
+com\example\assignment\service\EnrollmentService.class
+com\example\assignment\AssignmentSpringApplication.class
+com\example\assignment\model\Enrollment.class
+com\example\assignment\repository\LessonCompletionRepository.class
+com\example\assignment\model\Course.class
+com\example\assignment\controller\UserControllerFull.class
+com\example\assignment\repository\UserRepository.class
+com\example\assignment\repository\EnrollmentRepository.class
+com\example\assignment\model\Lesson.class
+com\example\assignment\controller\CourseController.class
+com\example\assignment\model\LessonCompletion.class
+com\example\assignment\repository\CourseRepository.class
+com\example\assignment\service\ProgressService.class
